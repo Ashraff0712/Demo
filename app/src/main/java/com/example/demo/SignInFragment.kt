@@ -50,11 +50,11 @@ class SignInFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         Log.d("fragment", "onViewCreated")
-        val userName: TextInputEditText
+        lateinit var userName: TextInputEditText
         userName = view.findViewById(R.id.UserName)
-        val button: Button
+        lateinit var button: Button
         button = view.findViewById(R.id.btn)
-        val dispTV :TextView
+        lateinit var dispTV :TextView
         dispTV = view.findViewById(R.id.displayTV)
         viewModel = ViewModelProvider(this).get(SignInViewModel::class.java)
         viewModel.str.observe(this, Observer {
